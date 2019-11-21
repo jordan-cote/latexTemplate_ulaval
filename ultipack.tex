@@ -1,0 +1,214 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% USEFUL LATEX PACKAGES AND CONFIGURATIONS
+%%%
+%%% Author: Louis-Philippe Rousseau (ULaval)
+%%% Created: ages ago, latest update in November 2016
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% to load before \documentclass %%%
+% check for common mistakes and obsolete packages
+%\RequirePackage[l2tabu,orthodox]{nag}
+%----------------------------------------------------------------------%
+%                               common                                 %
+%----------------------------------------------------------------------%
+% desirable LaTeX 2e fixes (distributions older than 2015)
+\usepackage{fixltx2e}
+% UTF-8 input encoding and T1 font encoding
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{verbatim}
+%fonctions chimiques
+\usepackage{mhchem}
+% Latin modern font families (for accented characters)
+\usepackage{lmodern}
+% typographic improvements
+\usepackage{microtype}
+% LaTeX internationalization
+\usepackage{babel}
+\usepackage[french]{babel}
+% setup for french in babel package
+\frenchbsetup{
+    StandardItemizeEnv=true,        % use standard format for lists
+    StandardEnumerateEnv=true,      % use standard format for enumerations
+    ThinSpaceInFrenchNumbers=true,  % thin space in numbers
+    og=«, fg=»                      % guillemets
+}
+%----------------------------------------------------------------------%
+%                        layout and structure                          %
+%----------------------------------------------------------------------%
+% changes the margins so that the full page is used
+%\usepackage{fullpage}
+% landscape environment (with PDF support)
+%\usepackage{pdflscape}
+% multicolumns documents
+%\usepackage{multicol}
+
+% advanced control over the document geometry
+%\usepackage[letterpaper]{geometry}
+% setup for the geometry package
+%\geometry{top=25mm,bottom=25mm,left=30mm,right=30mm}
+% changes the line spacing
+%\usepackage{setspace}
+% removes paragraph indentation
+%\usepackage[parfill]{parskip}
+% set paragraph indentation
+%\setlength{\parindent}{1cm}
+
+% advanced control over headers and footers
+%\usepackage{fancyhdr}
+% contents of headers and footers
+%\pagestyle{options}
+% format of page numbers
+%\pagenumbering{options}
+% advanced control over the ToC and other lists
+%\usepackage{tocloft}
+% add dots for chapters and sections in the ToC
+%\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+%\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+% advanced quoting environments and control
+\usepackage[autostyle]{csquotes}
+% character used for quoting in the source files
+\MakeOuterQuote{"}
+% better control of appendices
+\usepackage[toc]{appendix}
+
+%----------------------------------------------------------------------%
+%                               math                                   %
+%----------------------------------------------------------------------%
+% loads amsmath, corrects bugs and provides useful tools
+\usepackage{mathtools}
+% allow bold math symbols (replaces amsbsy)
+\usepackage{bm}
+% AMS math font and symbols
+\usepackage{amssymb} % also loads "amsfonts"
+% AMS theorem environment
+%\usepackage{amsthm}
+
+% consistent typesetting of numbers and units
+\usepackage{siunitx} % also loads "xparse"
+% setup for siunitx package
+%\sisetup{
+    %free-standing-units, % to use units abbreviations outside si commands
+    %space-before-unit, % add a space between a number and a free unit
+    %use-xspace % add a space after a free unit if necessary
+%}
+%----------------------------------------------------------------------%
+%                         figures and tables                           %
+%----------------------------------------------------------------------%
+% extended graphics functionalities
+\usepackage{graphicx}
+% improved tables and multirow cells
+\usepackage{booktabs,multirow}
+% flexible replacement for the "tabular" environment
+%\usepackage{tabu}
+% cell coloring in tables
+%\usepackage{colortbl}
+% multipage tables
+%\usepackage{longtable}
+% new column type: centered paragraph
+%\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+% new rule type for under the table header
+%\newcommand*{\headrule}{\midrule[\heavyrulewidth]}
+
+% better control of captions and subcaptions
+%\usepackage{caption,subcaption}
+% setup for caption and subcaption packages
+%\captionsetup{
+    %format=plain, % format of the caption: normal paragraph
+    %justification=centerlast, % center the last lineof caption
+    %width=0.9\textwidth, % width of caption
+    %subrefformat=parens % add parentheses to subfig reference
+%}
+%\captionsetup[sub]{options}
+% rename the french tables caption to "Tableau" instead of "Table"
+\addto\captionsfrench{\renewcommand{\tablename}{\textsc{Tableau}}}
+% control captions for multipages floats
+%\usepackage{captcont}
+
+%----------------------------------------------------------------------%
+%                bibliography and cross-referencing                    %
+%----------------------------------------------------------------------%
+% improved "cite" command
+%\usepackage{cite}
+% biblatex with Biber backend and numeric-comp style
+%\usepackage[backend=biber,style=numeric-comp]{biblatex}
+% setup for biblatex package
+%\ExecuteBibliographyOptions{
+    %sorting=none, % references are listed in citation order
+    %url=true, % print url when appropriate?
+    %doi=false, % print DOI?
+    %isbn=false % print ISBN/ISSN/ISRN?
+%}
+
+% create lists of acronyms, symbols, etc.
+\usepackage{acronym}
+\usepackage{nomentbl}
+
+%----------------------------------------------------------------------%
+%                            programming                               %    
+%----------------------------------------------------------------------%
+% include program listings into the document
+%\usepackage{listings}
+% setup for Matlab listings
+%\lstset{language=Matlab,
+    %basicstyle=\footnotesize,
+    %linewidth=0.95\textwidth,
+    %frame=single,
+    %tabsize=2,
+    %breaklines=true,
+    %numbers=right,
+    %numberstyle=\tiny,
+    %numbersep=5pt,
+    %showspaces=false,
+    %showtabs=false,
+    %showstringspaces=false
+%}
+
+% fancy verbatim environments
+%\usepackage{fancyvrb}
+% produce algorithms/pseudo-code
+%\usepackage{algpseudocode}
+
+%----------------------------------------------------------------------%
+%                           miscellaneous                              %
+%----------------------------------------------------------------------%
+% easily input or include files in folders
+\usepackage{import}
+% better support for conditional statements
+%\usepackage{xifthen}
+% advanced control over colors (loaded by many packages)
+%\usepackage{xcolor}
+% generate a dummy document
+%\usepackage{blindtext}
+
+% add todo notes (add option "final" to disable)
+%\usepackage[colorinlistoftodos]{todonotes}
+% define commands for new types of todos
+%\newcommand{\longtodo}[1]{\todo[inline]{#1}}
+%\newcommand{\addref}{\todo[color=red!40]{Add reference(s).}}
+%\newcommand{\addcont}[2][]{\ifthenelse{\equal{#1}{}}{\todo[inline,color=green!40,caption={#2}]{#2}}{\todo[inline,color=green!40,caption={#1}]{#2}}}
+%\newcommand{\note}[2][]{\ifthenelse{\equal{#1}{}}{\todo[inline,color=blue!40,caption={#2}]{#2}}{\todo[inline,color=green!40,caption={#1}]{#2}}}
+%\newcommand{\addcont}[1]{\todo[inline,color=green!40,caption={Add contents.}]{#1}}
+%\newcommand{\note}[1]{\todo[inline,color=blue!40,caption={Note.}]{#1}}
+
+
+%----------------------------------------------------------------------%
+%                   Packages that must be loaded last                  %
+%----------------------------------------------------------------------%
+% control hyperlinks in the document
+\usepackage{hyperref} % also loads "url" and "color"
+% setup for hyperref package
+\hypersetup{
+    colorlinks,                 % color links
+    %allcolors=ULlinkcolor,     % set the color for all links
+    citecolor=green,            % set the color for citations
+    filecolor=cyan,             % set the color for files links
+    linkcolor=black,              % set the color for document links
+    urlcolor=blue               % set to color for URLs
+}
+
+% improved cross-referencing
+\usepackage[noabbrev]{cleveref} % do not abbreviate cross-reference names
+
+
